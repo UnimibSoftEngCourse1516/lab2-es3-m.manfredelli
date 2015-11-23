@@ -48,14 +48,14 @@ public class AssertionTest {
     public void greaterThan() {
         Object o = new Object();
         Assert.assertGreaterThan(o, o);
-        Assert.assertGreaterThan("abc", "abc");
+        Assert.assertGreaterThan("abcd", "abc");
         Assert.assertGreaterThan(true, true);
-        Assert.assertGreaterThan((byte) 1, (byte) 1);
+        Assert.assertGreaterThan((byte) 2, (byte) 1);
         Assert.assertGreaterThan('a', 'a');
         Assert.assertGreaterThan((short) 1, (short) 1);
         Assert.assertGreaterThan(1, 1); // int by default, cast is unnecessary
         Assert.assertGreaterThan(1l, 1l);
-        Assert.assertGreaterThan(1.0, 1.0);
+        Assert.assertGreaterThan(1.1, 1.0);
         Assert.assertGreaterThan(1.0d, 1.0d);
     }
 

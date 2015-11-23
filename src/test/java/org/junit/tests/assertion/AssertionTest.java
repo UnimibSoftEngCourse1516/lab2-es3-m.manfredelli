@@ -33,6 +33,16 @@ public class AssertionTest {
 // @Test (expected=AssertionError.class) public void error() {
 //      assert false;
 //  }
+    
+    @Test
+    public void graterPrimitives() {
+        Assert.assertGraterThanInt(2,1);
+        Assert.assertGraterThanInt(0,1);
+        Assert.assertGraterThanDouble(2.12,2.10);
+        Assert.assertGraterThanDouble(2.01,2.1);
+        Assert.assertGraterThanChar('b','a');
+        Assert.assertGraterThanChar('c','d');
+    }
 
     @Test(expected = AssertionError.class)
     public void fails() {

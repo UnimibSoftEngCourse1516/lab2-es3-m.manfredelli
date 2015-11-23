@@ -27,6 +27,24 @@ public class Assert {
      */
     protected Assert() {
     }
+    
+    public static void assertGraterThanInt(int x,int y){
+        if(x<=y){
+            fail("sbagliato int");
+        }
+    }
+    
+    public static void assertGraterThanDouble(double x,double y){
+        if(x<=y){
+            fail("sbagliato double");
+        }
+    }
+    
+    public static void assertGraterThanChar(char x,char y){
+        if(x<=y){
+            fail("sbagliato char");
+        }
+    }
 
     /**
      * Asserts that a condition is true. If it isn't it throws an

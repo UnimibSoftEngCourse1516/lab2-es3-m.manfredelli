@@ -28,6 +28,12 @@ public class Assert {
     protected Assert() {
     }
 
+    public static void assertGreaterThan(Object o1, Object o2){
+        if(!((o1.getClass().equals(o2.getClass())) && (o1.toString().compareTo(o2.toString()))>0)){
+            fail("sbagliato");
+        }
+    }
+    
     /**
      * Asserts that a condition is true. If it isn't it throws an
      * {@link AssertionError} with the given message.

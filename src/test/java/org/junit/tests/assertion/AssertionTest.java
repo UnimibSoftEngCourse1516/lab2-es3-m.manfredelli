@@ -33,6 +33,21 @@ public class AssertionTest {
 // @Test (expected=AssertionError.class) public void error() {
 //      assert false;
 //  }
+    
+    @Test
+    public void greaterThan() {
+        Object o = new Object();
+        Assert.assertGreaterThan(o, o);
+        Assert.assertGreaterThan("abc", "abc");
+        Assert.assertGreaterThan(true, true);
+        Assert.assertGreaterThan((byte) 1, (byte) 1);
+        Assert.assertGreaterThan('a', 'a');
+        Assert.assertGreaterThan((short) 1, (short) 1);
+        Assert.assertGreaterThan(1, 1); // int by default, cast is unnecessary
+        Assert.assertGreaterThan(1l, 1l);
+        Assert.assertGreaterThan(1.0, 1.0);
+        Assert.assertGreaterThan(1.0d, 1.0d);
+    }
 
     @Test(expected = AssertionError.class)
     public void fails() {
